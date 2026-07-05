@@ -30,6 +30,8 @@ This problem led to Client-Server Architecture.
 
 ---
 
+
+
 ## 2. The Solution
 Instead of every device talking directly to every other device, introduce a central machine called a server.
 
@@ -50,6 +52,77 @@ Their job is mostly to:
 - display responses
 
 Every interaction flows through the server.
+
+![Client-Server Architecture](../Images/client-server_model_1253.webp)
+
+---
+
+## 3. How it works
+A client is any application used by the user.
+
+Examples include:
+- web browsers
+- mobile apps
+- desktop applications
+
+A server is a computer that continuously listens for incoming requests.
+
+The communication generally follows these steps.
+
+---
+### step 1
+The client sends an HTTP request.
+
+Example:
+```
+GET/profile
+
+```
+---
+
+### Step 2
+The server receives the request.
+
+It determines:
+- who sent it?
+- Are they authenticated?
+- What resource do they want?
+
+---
+
+### Step 3
+The server performs work.
+
+This could involve:
+-querying the database
+- performing calculations
+- checking permissions
+- calling another service
+
+---
+
+### Step 4
+The server sends back a response.
+
+Example:
+
+```
+
+{
+    "name": "Mutsa",
+    "role": "Software Engineer"
+}
+
+```
+---
+### Step 5
+The client displays the information to the user.
+The client does not decide whether the user has permissions.
+The server always remains the authority.
+
+![Client-Server Architecture](../Images/client-server_model_1253.webp)
+
+
 
 
 
