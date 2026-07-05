@@ -53,7 +53,7 @@ Their job is mostly to:
 
 Every interaction flows through the server.
 
-![Client-Server Architecture](../Images/client-server_model_1253.webp)
+![Client-Server Architecture](../Images/Client-server_model.png)
 
 ---
 
