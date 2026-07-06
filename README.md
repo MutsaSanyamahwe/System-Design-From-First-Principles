@@ -108,7 +108,7 @@ By understanding the problem first, the solution becomes much easier to remember
 ## Progress
 
 - [x] [Client-Server Architecture](concepts/01-client-server.md)
-- [x] [Latency & Throughput](concepts/02-Latency-&-throuhput.md)
+- [x] [Latency & Throughput](concepts/02-Latency-&-throughput.md)
 - [ ] Scalability
 - [ ] DNS
 - [ ] CDN
