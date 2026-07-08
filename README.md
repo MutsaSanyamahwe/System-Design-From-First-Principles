@@ -4,9 +4,13 @@
 
 Welcome!
 
-This repository documents my journey of learning **System Design** from first principles. Instead of memorizing technologies or architectural patterns, the goal is to understand **why they exist**, **what problems they solve**, and **when they should be used**.
+This repository documents my journey of learning **System Design from first principles**.
 
-Every topic begins with a real-world problem, followed by the reasoning that led to the solution. Along the way, I use practical examples from applications like Uber, Netflix, WhatsApp, Instagram, and Amazon to connect concepts to real systems.
+Instead of memorizing technologies or architectural patterns, the goal is to understand **why they exist**, **what problems they solve**, **when they should be used**, and **how they're applied in real-world systems**.
+
+Every concept begins with a real-world problem, followed by the reasoning that led to the solution. Whenever possible, each topic is accompanied by a hands-on implementation to bridge the gap between theory and practice.
+
+Throughout the repository, I use examples from applications like **Uber, Netflix, WhatsApp, Instagram, and Amazon** to connect concepts to real distributed systems.
 
 ---
 ## What You'll learn
@@ -74,14 +78,15 @@ Every topic begins with a real-world problem, followed by the reasoning that led
 ## Repository Structure
 
 ```
-
-System-Design-handbook/
+System-Design-From-First-Principles/
 
 ├── README.md
 ├── concepts/
+├── hands-on/
 ├── case-studies/
 ├── diagrams/
 └── images/
+
 ```
 
 ---
@@ -92,6 +97,7 @@ System-Design-handbook/
 This repository follows one simple principle:
 
 > **Understand the problem before learning the solution.**
+Rather than memorizing technologies, focus on the engineering challenges that led to their creation.
 
 For example:
 
@@ -134,6 +140,25 @@ By understanding the problem first, the solution becomes much easier to remember
 - [ ] Designing Netflix
 - [ ] Designing WhatsApp
 
+## Hands-On
+
+- [x] [DNS in Practice](hands-on/DNS-in-practice.md)
+- [ ] Reverse Proxy with NGINX
+- [ ] Load Balancer with NGINX
+- [ ] Redis Caching
+- [ ] Dockerizing an Application
+- [ ] Kubernetes Deployment
+- [ ] Python Rate Limiter
+- [ ] PostgreSQL Replication
+- [ ] PostgreSQL Sharding
+
+## Case Studies
+
+- [ ] Designing Uber
+- [ ] Designing Netflix
+- [ ] Designing WhatsApp
+- [ ] Designing Instagram
+- [ ] Designing YouTube
 ---
 
 ##  Contributions
