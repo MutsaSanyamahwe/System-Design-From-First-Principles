@@ -8,7 +8,7 @@ This repository documents my journey of learning **System Design from first prin
 
 Instead of memorizing technologies or architectural patterns, the goal is to understand **why they exist**, **what problems they solve**, **when they should be used**, and **how they're applied in real-world systems**.
 
-Every concept begins with a real-world problem, followed by the reasoning that led to the solution. Whenever possible, each topic is accompanied by a hands-on implementation to bridge the gap between theory and practice.
+Every concept begins with a real-world problem, followed by the reasoning that led to the solution. **Whenever possible, each topic is accompanied by a hands-on implementation to bridge the gap between theory and practice.**
 
 Throughout the repository, I use examples from applications like **Uber, Netflix, WhatsApp, Instagram, and Amazon** to connect concepts to real distributed systems.
 
