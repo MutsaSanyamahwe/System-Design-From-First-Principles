@@ -117,6 +117,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [Latency & Throughput](concepts/02-Latency-&-throughput.md)
 - [x] [Scalability](concepts/03-Scalability.md)
 - [x] [DNS](concepts/05-DNS.md)
+- [x] [HTTP & HTTPS](concepts/06-HTTP-&-HTTPS.md)
 - [ ] CDN
 - [ ] Reverse Proxy
 - [ ] Load Balancer
@@ -143,6 +144,7 @@ By understanding the problem first, the solution becomes much easier to remember
 ## Hands-On
 
 - [x] [DNS in Practice](hands-on/DNS-in-practice.md)
+- [x] [HTTPS in Practice](hands-on/HTTPS-in-practice.md)
 - [ ] Reverse Proxy with NGINX
 - [ ] Load Balancer with NGINX
 - [ ] Redis Caching
