@@ -206,3 +206,10 @@ For this reason, nearly every modern website uses HTTPS.
 - Modern web applications should always use HTTPS.
 
 ---
+
+## Hands-On
+Understanding how HTTPS works conceptually is only half the story.
+
+Continue to HTTPS in Practice to learn how you transition from HTTP (development stage) to HTTPS (deployment stage). [HTTPS in Practice](../hands-on/HTTPS-in-practice.md)
+
+
