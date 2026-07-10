@@ -1,6 +1,7 @@
 # HTTP & HTTPS
 
-#  The Problem
+## The Problem
+
 Imagine you've typed the following into your browser:
 
 ```
