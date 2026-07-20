@@ -120,7 +120,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [HTTP & HTTPS](concepts/06-HTTP-&-HTTPS.md)
 - [x] [TCP & UDP](concepts/07-TCP-&-UDP.md)
 - [x] [CDN](concepts/08-CDNs.md)
-- [x] [Reverse Proxy](concepts/08-Reverse-Proxy.md)
+- [x] [Reverse Proxy](concepts/09-Reverse-Proxy.md)
 - [ ] Load Balancer
 - [ ] API Gateway
 - [ ] REST
