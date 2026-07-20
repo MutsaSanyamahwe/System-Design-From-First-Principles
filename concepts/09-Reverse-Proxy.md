@@ -287,7 +287,7 @@ For example:
 
 Now that you understand what a reverse proxy is, it's time to configure one yourself.
 
- **Next:** [Reverse Proxy with NGINX](../hands-on/nginx-reverse-proxy.md)
+ **Next:** [Reverse Proxy with NGINX](../hands-on/Reverse-Proxy-in-practice.md)
 
 In the hands-on guide you'll learn how to:
 
