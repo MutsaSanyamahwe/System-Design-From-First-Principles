@@ -283,7 +283,7 @@ Without load balancers, many of today's large-scale applications wouldn't be abl
 
 Now that you understand why load balancers exist, it's time to build one.
 
- **Next:** [Load Balancing with NGINX](../hands-on/nginx-load-balancer.md)
+ **Next:** [Load Balancing with NGINX](../hands-on/Load-Balancer-NGINX-in-practice.md)
 
 In the hands-on guide, you'll learn how to:
 
