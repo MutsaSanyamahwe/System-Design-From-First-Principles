@@ -122,7 +122,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [CDN](concepts/08-CDNs.md)
 - [x] [Reverse Proxy](concepts/09-Reverse-Proxy.md)
 - [x] [Load Balancer](concepts/10-Load-Balancer.md)
-- [ ] API Gateway
+- [x] [API Gateway](concepts/11-API-Gateway.md)
 - [ ] REST
 - [ ] GraphQL
 - [ ] gRPC
