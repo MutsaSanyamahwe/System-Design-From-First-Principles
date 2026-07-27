@@ -125,7 +125,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [API Gateway](concepts/11-API-Gateway.md)
 - [x] [REST APIs](concepts/12-REST-APIs.md)
 - [x] [GraphQL](concepts/13-GraphQL.md)
-- [ ] gRPC
+- [x] [gRPC](concepts/14-gRPC.md)
 - [ ] API Versioning
 - [ ] Virtual Machines
 - [ ] Containers
