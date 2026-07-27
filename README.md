@@ -123,7 +123,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [Reverse Proxy](concepts/09-Reverse-Proxy.md)
 - [x] [Load Balancer](concepts/10-Load-Balancer.md)
 - [x] [API Gateway](concepts/11-API-Gateway.md)
-- [x] [REST APIs](concepta/12-REST-APIs.md)
+- [x] [REST APIs](concepts/12-REST-APIs.md)
 - [x] [GraphQL](concepts/13-GraphQL.md)
 - [ ] gRPC
 - [ ] API Versioning
