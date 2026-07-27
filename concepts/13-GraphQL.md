@@ -128,7 +128,7 @@ Nothing less.
 
 ---
 
-## A Single Endpoint
+### A Single Endpoint
 
 Most GraphQL APIs expose only one endpoint.
 
@@ -152,7 +152,7 @@ GraphQL always sends queries to the same endpoint.
 
 ---
 
-## Queries
+### Queries
 
 Queries to retrieve data.
 
@@ -191,7 +191,7 @@ Think of queries as the GraphQL equivalent of HTTP GET.
 
 ---
 
-## Mutations
+### Mutations
 
 Mutations change data.
 
@@ -223,7 +223,7 @@ Think of mutations as REST's:
 
 ---
 
-## Schemas
+### Schemas
 
 Every GraphQL API defines a schema.
 
@@ -248,7 +248,7 @@ The schema acts as a contract between the client and server.
 
 ---
 
-## Resolvers
+### Resolvers
 
 Resolvers are functions that fetch the requested data.
 
