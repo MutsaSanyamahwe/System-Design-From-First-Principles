@@ -1,6 +1,6 @@
 # REST APIs
 
-## 1. The Problem
+## The Problem
 
 Imagine you're building an online store.
 
