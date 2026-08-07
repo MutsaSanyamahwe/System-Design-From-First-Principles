@@ -196,7 +196,7 @@ GET /api/users?version=2
 ---
 
 
-### Header Versioning
+### 3. Header Versioning
 
 The client specifies the version using an HTTP header.
 
