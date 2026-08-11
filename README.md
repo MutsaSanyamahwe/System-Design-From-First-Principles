@@ -127,7 +127,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [GraphQL](concepts/13-GraphQL.md)
 - [x] [gRPC](concepts/14-gRPC.md)
 - [x] [API Versioning](concepts/15-API-versioning.md)
-- [ ] Virtual Machines
+- [x] [Virtual Machines](concepts/16-Virtual-machines.md)
 - [ ] Containers
 - [ ] Docker
 - [ ] Kubernetes
