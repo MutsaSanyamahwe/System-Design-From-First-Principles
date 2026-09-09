@@ -242,4 +242,306 @@ The Engine manages:
 - Networks
 - Volumes
 - Container lifecycle
- 
+
+---
+
+## Docker Registry
+
+If Docker solves the problem of packaging applications, we also need somewhere to store and distribute those packages.
+
+That's where a registry comes in.
+
+For example:
+
+Docker Hub is a container registry.
+
+The flow becomes:
+
+```
+Developer
+    │
+    │ docker build
+    ↓
+Docker Image
+    │
+    │ docker push
+    ↓
+Container Registry
+    │
+    │ docker pull
+    ↓
+Another Machine
+    │
+    │ docker run
+    ↓
+Container
+```
+
+This gives us a portable way of distributing applications.
+
+---
+
+## Docker Layers
+
+Docker images are generally built in layers.
+
+For example:
+
+```
+FROM python:3.12-slim
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY . .
+```
+Conceptually:
+
+```
+┌─────────────────────────┐
+│ Application code        │ ← Layer
+├─────────────────────────┤
+│ Python dependencies     │ ← Layer
+├─────────────────────────┤
+│ Python runtime          │ ← Layer
+├─────────────────────────┤
+│ Base filesystem         │ ← Layer
+└─────────────────────────┘
+```
+
+Why?
+
+Because layers can be **reused and cached.**
+
+If you change only your application code, Docker doesn't necessarily need to rebuild everything from scratch.
+
+This makes builds faster and saves storage/bandwidth.
+
+---
+
+## Docker and the Linux Kernel
+
+This connects directly to what we learned about containers.
+
+Docker containers do not contain a complete operating system in the way a VM does.
+
+Instead, containers share the host's kernel.
+
+```
+Virtual Machines
+
+┌───────────┐ ┌───────────┐
+│ App       │ │ App       │
+│ Guest OS  │ │ Guest OS  │
+│           │ │           │
+└─────┬─────┘ └─────┬─────┘
+      │             │
+      └──────┬──────┘
+             ↓
+       Hypervisor
+             ↓
+       Host Hardware
+```
+
+Containers:
+
+```
+┌───────────┐ ┌───────────┐
+│ App       │ │ App       │
+│ Libraries │ │ Libraries │
+└─────┬─────┘ └─────┬─────┘
+      │             │
+      └──────┬──────┘
+             ↓
+        Host Kernel
+             ↓
+          Hardware
+```
+
+Docker therefore relies on the underlying operating system's container primitives.
+
+On Linux, these include mechanisms such as:
+
+- Namespaces -> isolation
+- cgroups    -> resource control
+- Union/ overlay filesystems -> layered filesystems
+
+---
+
+## Docker Networking
+
+Containers often need to communicate.
+
+For example:
+
+```
+Frontend
+    │
+    ↓
+Backend
+    │
+    ↓
+Database
+```
+
+Docker provides networking mechanisms that allow containers to communicate with each other.
+
+Instead of manually configuring every network interface, Docker can create a network:
+
+```Bash
+docker network create my-network
+```
+
+Then containers can be attached to it.
+
+This becomes especially useful when building multi-container applications.
+
+---
+
+## Docker Volumes
+
+Containers are designed to be disposable.
+
+But sometimes data must survive when containers are deleted.
+
+For example:
+
+```
+Container
+    │
+    ↓
+Database
+```
+
+If the database's data exists only inside the container, deleting the container can destroy that data.
+
+Docker provides volumes for persistent storage.
+
+```
+Container
+    │
+    ↓
+Volume
+    │
+    ↓
+Persistent Data
+```
+
+So:
+
+> Container lifecycle is not the same as data lifecycle
+
+This distinction becomes very important when you start studying databases and distributed systems.
+
+---
+
+## Docker Compose
+
+Real applications rarely consist of only one container.
+
+You might have:
+
+```
+Frontend
+Backend
+PostgreSQL
+Redis
+```
+
+Running all of these manually would become annoying.
+
+Docker Compose allows you to define a multi-container application declaratively.
+
+For example:
+
+```YAML
+services:
+  backend:
+    build: .
+  
+  database:
+    image: postgres
+```
+
+
+Then:
+
+```Bash
+docker compose up
+```
+
+can start the application stack.
+
+Conceptually:
+
+```
+             Docker Compose
+                   │
+       ┌───────────┼───────────┐
+       ↓           ↓           ↓
+   Frontend     Backend     Database
+   Container    Container   Container
+```
+
+---
+
+## What Docker Really Gives Us
+
+Docker isn't valuable simply because it runs containers.
+
+Its bigger value is standardization.
+
+Without Docker:
+
+```
+Developer A
+   ↓
+"My environment"
+
+Developer B
+   ↓
+"Different environment"
+
+Production
+   ↓
+"Another environment"
+```
+
+
+With Docker:
+
+```
+             Docker Image
+                  │
+        ┌─────────┼─────────┐
+        ↓         ↓         ↓
+      Dev       Test      Production
+```
+
+The same packaged application environment can move through the development pipeline.
+
+---
+
+## Mental model
+
+```
+VM
+│
+├── Solves: hardware isolation
+│
+↓
+Container
+│
+├── Solves: process/environment isolation
+│
+↓
+Docker
+│
+├── Solves: packaging + building + distributing + running containers
+│
+↓
+Kubernetes
+│
+└── Solves: operating many containers at scale
+```
