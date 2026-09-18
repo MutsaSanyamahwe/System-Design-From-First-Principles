@@ -130,7 +130,7 @@ By understanding the problem first, the solution becomes much easier to remember
 - [x] [Virtual Machines](concepts/16-Virtual-machines.md)
 - [x] [Containers](concepts/17-Containers.md)
 - [x] [Docker](concepts/18-Docker.md)
-- [ ] Kubernetes
+- [x] [Kubernetes](concepts/19-Kubernetes.md)
 - [ ] Caching
 - [ ] Message Queues
 - [ ] Databases
